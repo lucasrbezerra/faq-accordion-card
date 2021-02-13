@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Faq | Lucas Ribeiro</title>
+  </head>
+  <body>
+    <div id="container">
+      <aside>
+        <img id="box" src="/img/illustration-box-desktop.svg" alt="" />
+        <img
+          id="woman"
+          src="/img/illustration-woman-online-desktop.svg"
+          alt="Woman"
+        />
+      </aside>
+      <main>
+        <h1>FAQ</h1>
+        <button type="button" class="ask" >
+          <p>How many team members can I invite?</p>
+          <img class="arrow" src="/img/icon-arrow-down.svg" alt="arrow" />
+        </button>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sit
+            quod voluptas.
+          </p>
+        </div>
+        <button type="button" class="ask">
+          <p>What is the maximum file upload size?</p>
+          <img class="arrow" src="/img/icon-arrow-down.svg" alt="arrow" />
+        </button>
+        <div class="content">
+          <p>
+            No more than 2GB. All files in your account must fit your allotted
+            storange space.
+          </p>
+        </div>
+        <button type="button" class="ask">
+          <p>How do i reset my password?</p>
+          <img class="arrow" src="/img/icon-arrow-down.svg" alt="arrow" />
+        </button>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sit
+            quod voluptas.
+          </p>
+        </div>
+        <button type="button" class="ask">
+          <p>Can i cancel my subscription?</p>
+          <img class="arrow" src="/img/icon-arrow-down.svg" alt="arrow" />
+        </button>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sit
+            quod voluptas.
+          </p>
+        </div>
+        <button type="button" class="ask">
+          <p>Do you provide additional support?</p>
+          <img class="arrow" src="/img/icon-arrow-down.svg" alt="arrow" />
+        </button>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sit
+            quod voluptas.
+          </p>
+        </div>
+      </main>
+    </div>
+    <script>
+      var coll = document.getElementsByClassName("ask");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          var arrow = this.querySelector("img");
+          if (content.style.display === "block") {
+            content.style.display = "none";
+            arrow.style.transform = "rotate(0deg)";
+          } else {
+            content.style.display = "block";
+            arrow.style.transform = "rotate(180deg)";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
